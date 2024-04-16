@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(216, 35, 35);
+        }
+        .container{
+            height:700px;
+            width:1000px;
+            background-image: url("shinshan.jpeg");
+            background-size: cover;
+            border-radius: 10px; 
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            filter:drop-shadow(20px 20px 40px rgb(236, 231, 231));
+        }
+        .wishes{
+            height:60%;
+            width:75%;
+            margin-left:500px;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            cursor:url("stick.jpg")6 19,auto ;
+        }
+        .wishs{
+            height: 30px;
+            width:350px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .wish{
+            height: 30px;
+            width: 280px;
+            background-color: rgb(135, 15, 15);
+            border-color:black;
+            color:white;
+            font-size: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        
+        .wish:hover{
+            background:rgb(247, 86, 113);
+            border-color: #f603a3
+        }
+        .wish:active{
+            background:rgb(247, 86, 113);
+            border-color: #f603a3;
+        }
+
+        .com{
+            height: 30px;
+            width:30px;
+        }
+
+        .done{
+            height:100px;
+            width:200px;
+            background-color: red;
+            font-size: 30px;
+            font-family: italic;
+            color: white;
+            border-radius: 20px;
+            filter:drop-shadow(5px 5px rgba(255, 192, 203, 0.753));
+        }
+
+
+
+     </style>
+</head>
+<body>
+    <center>
+     <form class="container">
+     <div class="wishes">
+        <div class="wishs">
+          <input type="text" class="wish" value="TRAVELLING"/>
+          <input type="checkbox" class="com" id="checkbox1" onchange="change()">
+        </div>
+
+       <div class="wishs">
+          <input type="text" class="wish" value="NIGHTRIDES"/>
+          <input type="checkbox" class="com" id="checkbox1" onchange="change()">
+
+        </div>
+
+        <div class="wishs">
+           <input type="text" class="wish" VALUE="SHOPPING"/>
+            <input type="checkbox" class="com" id="checkbox1" onchange="change()">
+        </div>
+
+        <div class="wishs">
+            <input type="text" class="wish" value="FOOD"/>
+            <input type="checkbox" class="com" id="checkbox1" onchange="change()">
+
+        </div>
+
+        <div class="wishs">
+          <input type="text" class="wish" value="STITCHING"/>
+          <input type="checkbox" class="com" id="checkbox1" onchange="change()">
+        </div>
+
+        <div class="done" id="done" style="display:none;">
+            <p>WELL DONE</p>
+        </div>
+
+        </div>
+    </form>
+    </center>
+     <script>
+        
+       function change() {
+        var checkboxes = document.querySelectorAll('.com');
+        var allChecked = true;
+        checkboxes.forEach(function(checkbox) {
+            if (!checkbox.checked) {
+                allChecked = false;
+            }
+        });
+        if (allChecked) {
+            document.getElementById("done").style.display = "block";
+        }
+    }
+</script>
+
+     </script>
+
+</body>>
+</html>
